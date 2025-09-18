@@ -1,14 +1,20 @@
 import requests
 import time
+import os
 
-contagem = 1
+contagem = 0
 
-while contagem <= 10:
-    req = requests.head("http://localhost:8080/erro")
-    status_code = req.status_code
-    print(f'status code: {status_code}')
-    time.sleep(1)
-    if status_code == 200:
-        continue
+req = requests.head("http://localhost:8080/erro")
+status_code = req.status_code
+print(f'status code: {status_code}')
+
+for i in contagem:
+    if contagem <= 60:
+        
+        time.sleep(1)
+    elif:
+        contagem <= 60
+
     else:
-        contagem = contagem + 1
+        contagem == 60
+        os.system('docker restart ')
